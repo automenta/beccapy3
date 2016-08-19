@@ -1,0 +1,339 @@
+Available transformations for the -f/--fix option:
+apply
+asserts
+basestring
+buffer
+callable
+dict
+except
+exec
+execfile
+exitfunc
+filter
+funcattrs
+future
+getcwdu
+has_key
+idioms
+import
+imports
+imports2
+input
+intern
+isinstance
+itertools
+itertools_imports
+long
+map
+metaclass
+methodattrs
+ne
+next
+nonzero
+numliterals
+operator
+paren
+print
+raise
+raw_input
+reduce
+renames
+repr
+set_literal
+standarderror
+sys_exc
+throw
+tuple_params
+types
+unicode
+urllib
+ws_comma
+xrange
+xreadlines
+zip
+--- base_world.py	(original)
++++ base_world.py	(refactored)
+@@ -1,7 +1,7 @@
+ """
+ The base world on which all the other worlds are based.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ 
+--- fruit.py	(original)
++++ fruit.py	(refactored)
+@@ -14,7 +14,7 @@
+ mathematically related to the XOR task, a challenge for
+ many machine learning algorithms.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- grid_1D.py	(original)
++++ grid_1D.py	(refactored)
+@@ -12,7 +12,7 @@
+     python -m grid_1D
+ 
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- grid_1D_chase.py	(original)
++++ grid_1D_chase.py	(refactored)
+@@ -7,7 +7,7 @@
+ step. The target keeps moving, so it does require the ability to respond
+ to sensory information.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- grid_1D_delay.py	(original)
++++ grid_1D_delay.py	(refactored)
+@@ -5,7 +5,7 @@
+ correct cause. The reward is delayed by a variable amount, which
+ makes the task challenging.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- grid_1D_ms.py	(original)
++++ grid_1D_ms.py	(refactored)
+@@ -5,7 +5,7 @@
+ one-dimensional grid task, but requires multi-step planning
+ or time-delayed reward assignment for optimal behavior.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- grid_1D_noise.py	(original)
++++ grid_1D_noise.py	(refactored)
+@@ -7,7 +7,7 @@
+ make the implicit assumption that all sensors are informative.
+ This task is intended to break them.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- grid_2D.py	(original)
++++ grid_2D.py	(refactored)
+@@ -5,7 +5,7 @@
+ is similar to it in many ways. It is a little more
+ challenging, because can take two actions to reach a reward state.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- grid_2D_dc.py	(original)
++++ grid_2D_dc.py	(refactored)
+@@ -7,7 +7,7 @@
+ account in order to know what actions to take. This task requires building
+ basic sensory data into more complex features in order to do well.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- image_1D.py	(original)
++++ image_1D.py	(refactored)
+@@ -6,7 +6,7 @@
+ construction of the task, it's not strictly necessary to build
+ complex features to do well on it.
+ """
+-from __future__ import print_function
++
+ import os
+ 
+ import matplotlib.pyplot as plt
+--- image_2D.py	(original)
++++ image_2D.py	(refactored)
+@@ -5,7 +5,7 @@
+ to build a comparatively large number of sensors into
+ a few informative features.
+ """
+-from __future__ import print_function
++
+ import os
+ 
+ import matplotlib.pyplot as plt
+--- test.py	(original)
++++ test.py	(refactored)
+@@ -19,7 +19,7 @@
+     python -m test 9 -p
+ """
+ 
+-from __future__ import print_function
++
+ import argparse
+ import cProfile
+ import pstats
+--- world_tools.py	(original)
++++ world_tools.py	(refactored)
+@@ -1,7 +1,7 @@
+ """
+ A few functions that are useful to multiple worlds
+ """
+-from __future__ import print_function
++
+ import os
+ 
+ import matplotlib.pyplot as plt
+--- ./base_world.py	(original)
++++ ./base_world.py	(refactored)
+@@ -1,7 +1,7 @@
+ """
+ The base world on which all the other worlds are based.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ 
+--- ./fruit.py	(original)
++++ ./fruit.py	(refactored)
+@@ -14,7 +14,7 @@
+ mathematically related to the XOR task, a challenge for
+ many machine learning algorithms.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- ./grid_1D.py	(original)
++++ ./grid_1D.py	(refactored)
+@@ -12,7 +12,7 @@
+     python -m grid_1D
+ 
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- ./grid_1D_chase.py	(original)
++++ ./grid_1D_chase.py	(refactored)
+@@ -7,7 +7,7 @@
+ step. The target keeps moving, so it does require the ability to respond
+ to sensory information.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- ./grid_1D_delay.py	(original)
++++ ./grid_1D_delay.py	(refactored)
+@@ -5,7 +5,7 @@
+ correct cause. The reward is delayed by a variable amount, which
+ makes the task challenging.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- ./grid_1D_ms.py	(original)
++++ ./grid_1D_ms.py	(refactored)
+@@ -5,7 +5,7 @@
+ one-dimensional grid task, but requires multi-step planning
+ or time-delayed reward assignment for optimal behavior.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- ./grid_1D_noise.py	(original)
++++ ./grid_1D_noise.py	(refactored)
+@@ -7,7 +7,7 @@
+ make the implicit assumption that all sensors are informative.
+ This task is intended to break them.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- ./grid_2D.py	(original)
++++ ./grid_2D.py	(refactored)
+@@ -5,7 +5,7 @@
+ is similar to it in many ways. It is a little more
+ challenging, because can take two actions to reach a reward state.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- ./grid_2D_dc.py	(original)
++++ ./grid_2D_dc.py	(refactored)
+@@ -7,7 +7,7 @@
+ account in order to know what actions to take. This task requires building
+ basic sensory data into more complex features in order to do well.
+ """
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.connector
+--- ./image_1D.py	(original)
++++ ./image_1D.py	(refactored)
+@@ -6,7 +6,7 @@
+ construction of the task, it's not strictly necessary to build
+ complex features to do well on it.
+ """
+-from __future__ import print_function
++
+ import os
+ 
+ import matplotlib.pyplot as plt
+--- ./image_2D.py	(original)
++++ ./image_2D.py	(refactored)
+@@ -5,7 +5,7 @@
+ to build a comparatively large number of sensors into
+ a few informative features.
+ """
+-from __future__ import print_function
++
+ import os
+ 
+ import matplotlib.pyplot as plt
+--- ./test.py	(original)
++++ ./test.py	(refactored)
+@@ -19,7 +19,7 @@
+     python -m test 9 -p
+ """
+ 
+-from __future__ import print_function
++
+ import argparse
+ import cProfile
+ import pstats
+--- ./world_tools.py	(original)
++++ ./world_tools.py	(refactored)
+@@ -1,7 +1,7 @@
+ """
+ A few functions that are useful to multiple worlds
+ """
+-from __future__ import print_function
++
+ import os
+ 
+ import matplotlib.pyplot as plt

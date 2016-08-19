@@ -1,0 +1,199 @@
+Available transformations for the -f/--fix option:
+apply
+asserts
+basestring
+buffer
+callable
+dict
+except
+exec
+execfile
+exitfunc
+filter
+funcattrs
+future
+getcwdu
+has_key
+idioms
+import
+imports
+imports2
+input
+intern
+isinstance
+itertools
+itertools_imports
+long
+map
+metaclass
+methodattrs
+ne
+next
+nonzero
+numliterals
+operator
+paren
+print
+raise
+raw_input
+reduce
+renames
+repr
+set_literal
+standarderror
+sys_exc
+throw
+tuple_params
+types
+unicode
+urllib
+ws_comma
+xrange
+xreadlines
+zip
+--- brain.py	(original)
++++ brain.py	(refactored)
+@@ -2,8 +2,8 @@
+ The Brain class.
+ """
+ 
+-from __future__ import print_function
+-import cPickle as pickle
++
++import pickle as pickle
+ import os
+ import numpy as np
+ 
+@@ -276,7 +276,7 @@
+         except IOError:
+             print('Couldn\'t open {0} for loading'.format(
+                 self.pickle_filename))
+-        except pickle.PickleError, err:
++        except pickle.PickleError as err:
+             print('Error unpickling world: {0}'.format(err))
+         return restored_brain
+ 
+--- level.py	(original)
++++ level.py	(refactored)
+@@ -2,7 +2,7 @@
+ The Level class.
+ """
+ 
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.node as node
+@@ -422,7 +422,7 @@
+         if self.num_nodes > self.last_num_nodes:
+             # Print any element sequences that have been added this time step.
+             if self.debug:
+-                for i in xrange(self.last_num_nodes, self.num_nodes):
++                for i in range(self.last_num_nodes, self.num_nodes):
+                     sequence_indices = [self.node_element_index[i]]
+                     temp_index = i
+                     while self.node_parent_index[temp_index] != 0:
+--- tools.py	(original)
++++ tools.py	(refactored)
+@@ -2,7 +2,7 @@
+ Constants and functions for use across the Becca core
+ """
+ 
+-from __future__ import print_function
++
+ import os
+ import sys
+ import matplotlib.pyplot as plt
+@@ -52,7 +52,7 @@
+         The padded version of ``arr``.
+     """
+     # For  padding a 1D array
+-    if isinstance(shape, (int, long)):
++    if isinstance(shape, int):
+         if shape <= 0:
+             rows = arr.size - shape
+         else:
+--- ziptie.py	(original)
++++ ziptie.py	(refactored)
+@@ -2,7 +2,7 @@
+ The Ziptie class.
+ """
+ 
+-from __future__ import print_function
++
+ import numpy as np
+ import matplotlib.pyplot as plt
+ 
+--- ./brain.py	(original)
++++ ./brain.py	(refactored)
+@@ -2,8 +2,8 @@
+ The Brain class.
+ """
+ 
+-from __future__ import print_function
+-import cPickle as pickle
++
++import pickle as pickle
+ import os
+ import numpy as np
+ 
+@@ -276,7 +276,7 @@
+         except IOError:
+             print('Couldn\'t open {0} for loading'.format(
+                 self.pickle_filename))
+-        except pickle.PickleError, err:
++        except pickle.PickleError as err:
+             print('Error unpickling world: {0}'.format(err))
+         return restored_brain
+ 
+--- ./level.py	(original)
++++ ./level.py	(refactored)
+@@ -2,7 +2,7 @@
+ The Level class.
+ """
+ 
+-from __future__ import print_function
++
+ import numpy as np
+ 
+ import becca.node as node
+@@ -422,7 +422,7 @@
+         if self.num_nodes > self.last_num_nodes:
+             # Print any element sequences that have been added this time step.
+             if self.debug:
+-                for i in xrange(self.last_num_nodes, self.num_nodes):
++                for i in range(self.last_num_nodes, self.num_nodes):
+                     sequence_indices = [self.node_element_index[i]]
+                     temp_index = i
+                     while self.node_parent_index[temp_index] != 0:
+--- ./tools.py	(original)
++++ ./tools.py	(refactored)
+@@ -2,7 +2,7 @@
+ Constants and functions for use across the Becca core
+ """
+ 
+-from __future__ import print_function
++
+ import os
+ import sys
+ import matplotlib.pyplot as plt
+@@ -52,7 +52,7 @@
+         The padded version of ``arr``.
+     """
+     # For  padding a 1D array
+-    if isinstance(shape, (int, long)):
++    if isinstance(shape, int):
+         if shape <= 0:
+             rows = arr.size - shape
+         else:
+--- ./ziptie.py	(original)
++++ ./ziptie.py	(refactored)
+@@ -2,7 +2,7 @@
+ The Ziptie class.
+ """
+ 
+-from __future__ import print_function
++
+ import numpy as np
+ import matplotlib.pyplot as plt
+ 
